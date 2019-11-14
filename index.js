@@ -41,7 +41,20 @@ class Airplane {
 */
 
 class Person {
-
+  constructor(name, age){
+    this.name = name,
+    this.age = age,
+    this.stomach = []
+  }
+  eat() {
+    this.stomach.push ();
+  }
+  poop() {
+    this.stomach.pop ();
+  }
+  toString() {
+    return `${name}, ${age}`;
+  }
 }
 
 /*
@@ -75,7 +88,14 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor(object) {
+    this.name = object.name,
+    this.age = object.age,
+    this.location = object.location
+  }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
+  }
 }
 
 /*
@@ -93,7 +113,11 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor {
-
+  constructor(object) {
+    this.name = object.name,
+    this.age = object.age,
+    this.location = object.location
+  }
 }
 
 /*

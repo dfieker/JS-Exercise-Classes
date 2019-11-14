@@ -182,7 +182,20 @@ class Student extends Lambdasian {
 class ProjectManager extends Instructor {
   constructor (object) {
     super(object);
-    
+    this.name = object.name,
+    this.age = object.age,
+    this.location = object.location,
+    this.specialty = object.specialty,
+    this.favLanguage = object.favLanguage,
+    this.catchPhrase = object.catchPhrase,
+    this.gradClassName = object.gradClassName,
+    this.favInstructor = object.favInstructor
+  }
+  standUp(channel) {
+    return `{name} announces to ${channel}, @channel standy times!`;
+  }
+  debugsCode(object, subject) {
+    return `{name} debugs {student.name}'s code on ${subject}`;
   }
 }
 

@@ -46,14 +46,18 @@ class Person {
     this.age = age,
     this.stomach = []
   }
-  eat() {
-    this.stomach.push ();
+  eat(someFood) {
+    if (this.stomach.length < 10) {
+    this.stomach.push (someFood);
   }
+  }
+  
+
   poop() {
-    this.stomach.pop ();
+    this.stomach = [];
   }
   toString() {
-    return `${name}, ${age}`;
+    return `${this.name}, ${this.age}`;
   }
 }
 
@@ -182,20 +186,14 @@ class Student extends Lambdasian {
 class ProjectManager extends Instructor {
   constructor (object) {
     super(object);
-    this.name = object.name,
-    this.age = object.age,
-    this.location = object.location,
-    this.specialty = object.specialty,
-    this.favLanguage = object.favLanguage,
-    this.catchPhrase = object.catchPhrase,
     this.gradClassName = object.gradClassName,
     this.favInstructor = object.favInstructor
   }
-  standUp(channel) {
-    return `{name} announces to ${channel}, @channel standy times!`;
+  standUp(slackchannel) {
+    return `${this.name} announces to ${slackchannel}, @channel standy times!`;
   }
-  debugsCode(object, subject) {
-    return `{name} debugs {student.name}'s code on ${subject}`;
+  debugsCode(studentobject, studentsubject) {
+    return `${this.name} debugs ${studentobject.name}'s code on ${studentsubject}`;
   }
 }
 

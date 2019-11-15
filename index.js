@@ -155,14 +155,14 @@ class Student extends Lambdasian {
     this.className = object.className,
     this.favSubjects = object.favSubjects
   }
-  listSubjects(favSubjects) {
-    return `${favSubjects}`;
+  listSubjects() {
+    return `Loving ${this.favSubjects}!`;
   }
-  PRAssignment(subject) {
-    return `student.name has submitted a PR for ${subject}`;
+  PRAssignment() {
+    return `${this.name} has submitted a PR for ${this.className}`;
   }
-  sprintChallenge(subject) {
-    return `student.name has begun sprint chalenge on ${subject}`;
+  sprintChallenge() {
+    return `student.name has begun sprint chalenge on {subject}`;
   }
 }
 
